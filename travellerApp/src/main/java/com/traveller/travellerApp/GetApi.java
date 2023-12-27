@@ -2,11 +2,11 @@ package com.traveller.travellerApp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+// import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Timestamp;
+// import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -72,22 +72,23 @@ public class GetApi {
         return null;
     }
 
-    public void saveStateToDatabase(State place, UUID uuid) {
-        String SQL = "INSERT INTO datastore (uuid, state, stateid, placename, placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
-        try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-            pstmt.setObject(1, uuid); // Use provided UUID
-            pstmt.setString(2, place.getState());
-            pstmt.setString(3, place.getStateid());
-            pstmt.setString(4, place.getPlaceName());
-            pstmt.setString(5, place.getPlaceId());
-            pstmt.setString(6, place.getPlacedetails());
-            pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
-            pstmt.executeUpdate();
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
+    // public void saveStateToDatabase(State place, UUID uuid) {
+    // String SQL = "INSERT INTO datastore (uuid, state, stateid, placename,
+    // placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
+    // try (Connection conn = connect();
+    // PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+    // pstmt.setObject(1, uuid); // Use provided UUID
+    // pstmt.setString(2, place.getState());
+    // pstmt.setString(3, place.getStateid());
+    // pstmt.setString(4, place.getPlaceName());
+    // pstmt.setString(5, place.getPlaceId());
+    // pstmt.setString(6, place.getPlacedetails());
+    // pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
+    // pstmt.executeUpdate();
+    // } catch (SQLException ex) {
+    // System.out.println(ex.getMessage());
+    // }
+    // }
 
     @RequestMapping(value = "/api/GetPlaceDetails/{placeName}")
     public ArrayList<Place> getPlaceDetailsByName(@PathVariable("placeName") String placeName) {
@@ -112,22 +113,23 @@ public class GetApi {
         return null;
     }
 
-    public void savePlaceToDatabase(Place place, UUID uuid) {
-        String SQL = "INSERT INTO datastore (uuid, state, stateid, placename, placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
-        try (Connection conn = connect();
-                PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-            pstmt.setObject(1, uuid); // Use provided UUID
-            pstmt.setString(2, place.getState());
-            pstmt.setString(3, place.getStateid());
-            pstmt.setString(4, place.getPlaceName());
-            pstmt.setString(5, place.getPlaceId());
-            pstmt.setString(6, place.getPlacedetails());
-            pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
-            pstmt.executeUpdate();
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
+    // public void savePlaceToDatabase(Place place, UUID uuid) {
+    // String SQL = "INSERT INTO datastore (uuid, state, stateid, placename,
+    // placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
+    // try (Connection conn = connect();
+    // PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+    // pstmt.setObject(1, uuid); // Use provided UUID
+    // pstmt.setString(2, place.getState());
+    // pstmt.setString(3, place.getStateid());
+    // pstmt.setString(4, place.getPlaceName());
+    // pstmt.setString(5, place.getPlaceId());
+    // pstmt.setString(6, place.getPlacedetails());
+    // pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
+    // pstmt.executeUpdate();
+    // } catch (SQLException ex) {
+    // System.out.println(ex.getMessage());
+    // }
+    // }
 
     public void display(ResultSet rs, ArrayList<Destination> list, String uuid) throws SQLException {
         while (rs.next()) {
@@ -161,9 +163,9 @@ public class GetApi {
             state2.setDetails(rs.getString("placedetails"));
             kafkaProducer.sendMessage(state2.toString());
         }
-        for (State plc : list2) {
-            saveStateToDatabase(plc, UUID.fromString(uuid));
-        }
+        // for (State plc : list2) {
+        // saveStateToDatabase(plc, UUID.fromString(uuid));
+        // }
     }
 
     public void display3(ResultSet rs, ArrayList<Place> list3, String uuid) throws SQLException {
@@ -186,9 +188,9 @@ public class GetApi {
             kafkaProducer.sendMessage(place2.toString());
 
         }
-        for (Place plc : list3) {
-            savePlaceToDatabase(plc, UUID.fromString(uuid));
-        }
+        // for (Place plc : list3) {
+        // savePlaceToDatabase(plc, UUID.fromString(uuid));
+        // }
     }
 
     @PreDestroy
