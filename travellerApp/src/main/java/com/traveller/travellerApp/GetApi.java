@@ -14,7 +14,6 @@ import java.util.UUID;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import jakarta.annotation.PreDestroy;
 
 @RestController
@@ -26,7 +25,14 @@ public class GetApi {
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }
+    // public final DataRepository dataRepository;
 
+    // @Autowired
+    // public GetApi(DataRepository dataRepository) {
+    // this.dataRepository = dataRepository;
+    // }
+
+    // private final DataRepository dataRepository;
     private final KafkaMessageProducer kafkaProducer = new KafkaMessageProducer("searchData");
 
     @RequestMapping(value = "/api/state")
@@ -62,7 +68,9 @@ public class GetApi {
                 ResultSet rs = stmt.executeQuery(SQL)) {
             display2(rs, list2, UUID.randomUUID().toString());
             String jsonString = new Gson().toJson(list2);
-
+            // for (State plc : list2) {
+            // dataRepository.saveStateToDatabase(plc, UUID.randomUUID());
+            // }
             kafkaTemplate.send("searchData", jsonString);
 
             return list2;
