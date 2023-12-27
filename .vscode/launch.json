@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ReversePositiveIntegers",
+            "request": "launch",
+            "mainClass": "com.traveller.travellerApp.ReversePositiveIntegers",
+            "projectName": "travellerApp"
+        },
+        {
+            "type": "java",
+            "name": "Saurv",
+            "request": "launch",
+            "mainClass": "com.traveller.travellerApp.Saurv",
+            "projectName": "travellerApp"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "com.traveller.travellerApp.Test",
+            "projectName": "travellerApp"
+        },
+        {
+            "type": "java",
+            "name": "Diwali",
+            "request": "launch",
+            "mainClass": "com.traveller.travellerApp.Diwali",
+            "projectName": "travellerApp"
+        },
+        {
+            "type": "java",
+            "name": "PrintDAta",
+            "request": "launch",
+            "mainClass": "com.traveller.travellerApp.PrintDAta",
+            "projectName": "travellerApp"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TravellerAppApplication<travellerApp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.traveller.travellerApp.TravellerAppApplication",
+            "projectName": "travellerApp",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

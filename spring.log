@@ -1,0 +1,21 @@
+2023-11-04T06:59:41.822+05:30  INFO 20708 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 17.0.8.1 with PID 20708 (C:\Users\chinm\Downloads\travellerApp\travellerApp\bin\main started by chinm in C:\Users\chinm\Downloads\travellerApp)
+2023-11-04T06:59:41.842+05:30  INFO 20708 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-11-04T06:59:43.291+05:30  INFO 20708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-04T06:59:43.302+05:30  INFO 20708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-04T06:59:43.303+05:30  INFO 20708 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-04T06:59:43.491+05:30  INFO 20708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-04T06:59:43.493+05:30  INFO 20708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1516 ms
+2023-11-04T06:59:43.998+05:30  INFO 20708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-04T06:59:44.006+05:30  INFO 20708 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 2.643 seconds (process running for 3.088)
+2023-11-04T07:00:10.522+05:30  INFO 20708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-04T07:00:10.524+05:30  INFO 20708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-04T07:00:10.528+05:30  INFO 20708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-04T09:08:57.868+05:30  INFO 26892 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 17.0.8.1 with PID 26892 (C:\Users\chinm\Downloads\travellerApp\travellerApp\bin\main started by chinm in C:\Users\chinm\Downloads\travellerApp)
+2023-11-04T09:08:57.875+05:30  INFO 26892 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-11-04T09:09:00.067+05:30  INFO 26892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-04T09:09:00.091+05:30  INFO 26892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-04T09:09:00.092+05:30  INFO 26892 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-04T09:09:00.374+05:30  INFO 26892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-04T09:09:00.375+05:30  INFO 26892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2366 ms
+2023-11-04T09:09:00.900+05:30  INFO 26892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-04T09:09:00.910+05:30  INFO 26892 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.759 seconds (process running for 4.744)
