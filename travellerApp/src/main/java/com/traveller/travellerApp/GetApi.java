@@ -2,18 +2,19 @@ package com.traveller.travellerApp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-// import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-// import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import jakarta.annotation.PreDestroy;
 
 @RestController
@@ -25,15 +26,15 @@ public class GetApi {
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }
-    // public final DataRepository dataRepository;
 
-    // @Autowired
-    // public GetApi(DataRepository dataRepository) {
-    // this.dataRepository = dataRepository;
-    // }
-
-    // private final DataRepository dataRepository;
     private final KafkaMessageProducer kafkaProducer = new KafkaMessageProducer("searchData");
+    private final DataSaverr dataSaver;
+
+    public GetApi(DataSaverr dataSaver) {
+        this.dataSaver = dataSaver;
+    }
+
+    private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     @RequestMapping(value = "/api/state")
     public ArrayList<Destination> getState() {
@@ -55,91 +56,8 @@ public class GetApi {
         return null;
     }
 
-    @RequestMapping(value = "/api/GetState/{stateName}")
-    public ArrayList<State> getPopularPlace(@PathVariable("stateName") String stateName) {
-        ArrayList<State> list2 = new ArrayList<>();
-        String SQL = "SELECT p.placeid, p.stateid, p.placename, p.placedetails, i.state " +
-                "FROM place p " +
-                "INNER JOIN india i ON p.stateid = i.id " +
-                "WHERE i.state = '" + stateName + "'";
-
-        try (Connection conn = connect();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(SQL)) {
-            display2(rs, list2, UUID.randomUUID().toString());
-            String jsonString = new Gson().toJson(list2);
-            // for (State plc : list2) {
-            // dataRepository.saveStateToDatabase(plc, UUID.randomUUID());
-            // }
-            kafkaTemplate.send("searchData", jsonString);
-
-            return list2;
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return null;
-    }
-
-    // public void saveStateToDatabase(State place, UUID uuid) {
-    // String SQL = "INSERT INTO datastore (uuid, state, stateid, placename,
-    // placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
-    // try (Connection conn = connect();
-    // PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-    // pstmt.setObject(1, uuid); // Use provided UUID
-    // pstmt.setString(2, place.getState());
-    // pstmt.setString(3, place.getStateid());
-    // pstmt.setString(4, place.getPlaceName());
-    // pstmt.setString(5, place.getPlaceId());
-    // pstmt.setString(6, place.getPlacedetails());
-    // pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
-    // pstmt.executeUpdate();
-    // } catch (SQLException ex) {
-    // System.out.println(ex.getMessage());
-    // }
-    // }
-
-    @RequestMapping(value = "/api/GetPlaceDetails/{placeName}")
-    public ArrayList<Place> getPlaceDetailsByName(@PathVariable("placeName") String placeName) {
-        ArrayList<Place> list3 = new ArrayList<>();
-        String SQL = "SELECT p.placeid, p.stateid, p.placename, p.placedetails," +
-                "i.state " +
-                "FROM place p " +
-                "INNER JOIN india i ON p.stateid = i.id " +
-                "WHERE p.placename = '" + placeName + "'";
-
-        try (Connection conn = connect();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(SQL)) {
-            display3(rs, list3, UUID.randomUUID().toString());
-            String jsonString = new Gson().toJson2(list3);
-            kafkaTemplate.send("searchData", jsonString);
-
-            return list3;
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return null;
-    }
-
-    // public void savePlaceToDatabase(Place place, UUID uuid) {
-    // String SQL = "INSERT INTO datastore (uuid, state, stateid, placename,
-    // placeid, placedetails, time) VALUES (?,?,?,?,?,?,?)";
-    // try (Connection conn = connect();
-    // PreparedStatement pstmt = conn.prepareStatement(SQL)) {
-    // pstmt.setObject(1, uuid); // Use provided UUID
-    // pstmt.setString(2, place.getState());
-    // pstmt.setString(3, place.getStateid());
-    // pstmt.setString(4, place.getPlaceName());
-    // pstmt.setString(5, place.getPlaceId());
-    // pstmt.setString(6, place.getPlacedetails());
-    // pstmt.setTimestamp(7, Timestamp.valueOf(LocalDateTime.now()));
-    // pstmt.executeUpdate();
-    // } catch (SQLException ex) {
-    // System.out.println(ex.getMessage());
-    // }
-    // }
-
-    public void display(ResultSet rs, ArrayList<Destination> list, String uuid) throws SQLException {
+    public void display(ResultSet rs, ArrayList<Destination> list, String uuid)
+            throws SQLException {
         while (rs.next()) {
             Destination destination = new Destination();
 
@@ -149,6 +67,28 @@ public class GetApi {
             destination.setSearchId(uuid);
             list.add(destination);
         }
+    }
+
+    @RequestMapping(value = "/api/GetState/{stateName}")
+    public ArrayList<State> getPopularPlace(@PathVariable("stateName") String stateName) {
+        ArrayList<State> list2 = new ArrayList<>();
+        String SQL = "SELECT p.placeid, p.stateid, p.placename, p.placedetails, i.state " +
+                "FROM place p " +
+                "INNER JOIN india i ON p.stateid = i.id " +
+                "WHERE i.state = '" + stateName + "'";
+        try (Connection conn = connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(SQL)) {
+            display2(rs, list2, UUID.randomUUID().toString());
+            String jsonString = new Gson().toJson(list2);
+
+            kafkaTemplate.send("searchData", jsonString);
+
+            return list2;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return null;
     }
 
     public void display2(ResultSet rs, ArrayList<State> list2, String uuid) throws SQLException {
@@ -170,10 +110,37 @@ public class GetApi {
             state2.setPlaceid(rs.getString("placeid"));
             state2.setDetails(rs.getString("placedetails"));
             kafkaProducer.sendMessage(state2.toString());
+            executor.submit(() -> {
+                for (State s : list2) {
+                    dataSaver.saveStateToDatabase(s, UUID.fromString(uuid));
+                }
+            });
         }
-        // for (State plc : list2) {
-        // saveStateToDatabase(plc, UUID.fromString(uuid));
-        // }
+
+    }
+
+    @RequestMapping(value = "/api/GetPlaceDetails/{placeName}")
+    public ArrayList<Place> getPlaceDetailsByName(@PathVariable("placeName") String placeName) {
+        ArrayList<Place> list3 = new ArrayList<>();
+        String SQL = "SELECT p.placeid, p.stateid, p.placename, p.placedetails," +
+                "i.state " +
+                "FROM place p " +
+                "INNER JOIN india i ON p.stateid = i.id " +
+                "WHERE p.placename = '" + placeName + "'";
+
+        try (Connection conn = connect();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(SQL)) {
+            display3(rs, list3, UUID.randomUUID().toString());
+            String jsonString = new Gson().toJson2(list3);
+
+            kafkaTemplate.send("searchData", jsonString);
+
+            return list3;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return null;
     }
 
     public void display3(ResultSet rs, ArrayList<Place> list3, String uuid) throws SQLException {
@@ -194,16 +161,23 @@ public class GetApi {
             place2.setDetails(rs.getString("placedetails"));
             place2.setSearchTimestamp(LocalDateTime.now());
             kafkaProducer.sendMessage(place2.toString());
-
+            executor.submit(() -> {
+                for (Place pstate : list3) {
+                    dataSaver.savePlaceToDatabase(pstate, UUID.fromString(uuid));
+                }
+            });
         }
-        // for (Place plc : list3) {
-        // savePlaceToDatabase(plc, UUID.fromString(uuid));
-        // }
+
     }
 
     @PreDestroy
     public void closeProducer() {
         kafkaProducer.closeProducer();
+    }
+
+    @PreDestroy
+    public void shutdownExecutor() {
+        executor.shutdown();
     }
 
 }
