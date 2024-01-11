@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+// import java.util.concurrent.ExecutorService;
+// import java.util.concurrent.Executors;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,13 +27,13 @@ public class GetApi {
     }
 
     private final KafkaMessageProducer kafkaProducer = new KafkaMessageProducer("searchData");
-    private final DataSaverr dataSaver;
+    // private final DataSaverr dataSaver;
 
-    public GetApi(DataSaverr dataSaver) {
-        this.dataSaver = dataSaver;
-    }
+    // public GetApi(DataSaverr dataSaver) {
+    // this.dataSaver = dataSaver;
+    // }
 
-    private final ExecutorService executor = Executors.newSingleThreadExecutor();
+    // private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     @RequestMapping(value = "/api/state")
     public ArrayList<Destination> getState() {
@@ -109,11 +109,11 @@ public class GetApi {
             state2.setPlaceid(rs.getString("placeid"));
             state2.setDetails(rs.getString("placedetails"));
             kafkaProducer.sendMessage(state2.toString());
-            executor.submit(() -> {
-                for (State s : list2) {
-                    dataSaver.saveStateToDatabase(s, UUID.fromString(uuid));
-                }
-            });
+            // executor.submit(() -> {
+            // for (State s : list2) {
+            // dataSaver.saveStateToDatabase(s, UUID.fromString(uuid));
+            // }
+            // });
         }
 
     }
@@ -160,11 +160,11 @@ public class GetApi {
             place2.setDetails(rs.getString("placedetails"));
             place2.setSearchTimestamp(LocalDateTime.now());
             kafkaProducer.sendMessage(place2.toString());
-            executor.submit(() -> {
-                for (Place pstate : list3) {
-                    dataSaver.savePlaceToDatabase(pstate, UUID.fromString(uuid));
-                }
-            });
+            // executor.submit(() -> {
+            // for (Place pstate : list3) {
+            // dataSaver.savePlaceToDatabase(pstate, UUID.fromString(uuid));
+            // }
+            // });
         }
 
     }
@@ -174,9 +174,9 @@ public class GetApi {
         kafkaProducer.closeProducer();
     }
 
-    @PreDestroy
-    public void shutdownExecutor() {
-        executor.shutdown();
-    }
+    // @PreDestroy
+    // public void shutdownExecutor() {
+    // executor.shutdown();
+    // }
 
 }
