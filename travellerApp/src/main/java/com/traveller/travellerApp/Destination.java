@@ -3,15 +3,12 @@ package com.traveller.travellerApp;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
-// import javax.persistence.GeneratedValue;
-// import javax.persistence.GenerationType;
+
 import javax.persistence.Table;
 
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// import jakarta.persistence.Table;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 @Entity
 @Data
@@ -73,17 +70,6 @@ class State {
     State() {
 
     }
-
-    // State(String stateid, String placename, String placedetails, String placeid,
-    // String state, String searchId) {
-
-    // this.stateid = stateid;
-    // this.placename = placename;
-    // this.placedetails = placedetails;
-    // this.placeid = placeid;
-    // this.state = state;
-    // this.searchId = searchId;
-    // }
 
     State(String stateid, String placename, String placedetails, String placeid, String state) {
 
@@ -160,28 +146,45 @@ class StateKafka extends State {
         this.searchTimestamp = searchTimestamp;
     }
 
+    // @Override
+    // public String toString() {
+
+    // return "\n"
+    // + "time=" + searchTimestamp + "\n" +
+    // "stateId='" + stateid + '\'' + "\n" +
+    // " placeDetails='" + placedetails + '\'' + "\n" +
+    // " state='" + state + '\'' + "\n" +
+    // " searchId='" + searchId + '\'' + "\n" +
+    // " placeId='" + placeid + '\'' + "\n" +
+    // " placeName='" + placename + '\'' +
+    // "\n";
+    // }
     @Override
     public String toString() {
-        // return "{" +
-        // "stateId='" + stateid + '\'' +
-        // ", placeDetails='" + placedetails + '\'' +
-        // ", state='" + state + '\'' +
-        // ", searchId='" + searchId + '\'' +
-        // ", placeId='" + placeid + '\'' +
-        // ", placeName='" + placename + '\'' +
-        // ", searchTimestamp='" + searchTimestamp + '\'' +
-        // '}';
-        return "**********************************************\n"
-                + searchTimestamp + "\n {" +
-                "stateId='" + stateid + '\'' + ",\n" +
-                " placeDetails='" + placedetails + '\'' + ",\n" +
-                " state='" + state + '\'' + ",\n" +
-                " searchId='" + searchId + '\'' + ",\n" +
-                " placeId='" + placeid + '\'' + ",\n" +
-                " placeName='" + placename + '\'' +
-                '}' + "\n" +
-                "**********************************************\n";
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            // return objectMapper.writeValueAsString(
+            // this.getState() + " " + this.getPlacedetails() + " " + this.getStateid() + "
+            // " + this.getPlaceName()
+            // + " " + this.getPlaceId() + this.getSearchId() + " " +
+            // this.getSearchTimestamp());
+            ObjectNode jsonNode = objectMapper.createObjectNode();
+            jsonNode.put("state", getState());
+            jsonNode.put("placedetails", getPlacedetails());
+            jsonNode.put("stateid", getStateid());
+            jsonNode.put("placeName", getPlaceName());
+            jsonNode.put("placeId", getPlaceId());
+            jsonNode.put("searchId", getSearchId());
+            // jsonNode.put("searchTimestamp", getSearchTimestamp().toString());
+
+            return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonNode);
+
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return "";
+        }
     }
+
 }
 
 class Place extends State {
@@ -277,15 +280,32 @@ class PlaceKafka extends State {
 
     @Override
     public String toString() {
-        return "**********************************************\n"
-                + searchTimestamp + "\n {" +
-                "stateId='" + stateid + '\'' + ",\n" +
-                " placeDetails='" + placedetails + '\'' + ",\n" +
-                " state='" + state + '\'' + ",\n" +
-                " searchId='" + searchId + '\'' + ",\n" +
-                " placeId='" + placeid + '\'' + ",\n" +
-                " placeName='" + placename + '\'' +
-                '}' + "\n" +
-                "**********************************************\n";
+        // return "\n"
+        // + "time=" + searchTimestamp + "\n {" +
+        // "stateId='" + stateid + '\'' + ",\n" +
+        // " placeDetails='" + placedetails + '\'' + ",\n" +
+        // " state='" + state + '\'' + ",\n" +
+        // " searchId='" + searchId + '\'' + ",\n" +
+        // " placeId='" + placeid + '\'' + ",\n" +
+        // " placeName='" + placename + '\'' +
+        // '}' + "\n";
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+
+            ObjectNode jsonNode = objectMapper.createObjectNode();
+            jsonNode.put("state", getState());
+            jsonNode.put("placedetails", getPlacedetails());
+            jsonNode.put("stateid", getStateid());
+            jsonNode.put("placeName", getPlaceName());
+            jsonNode.put("placeId", getPlaceId());
+            jsonNode.put("searchId", getSearchId());
+            // jsonNode.put("searchTimestamp", getSearchTimestamp().toString());
+
+            return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonNode);
+
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return "";
+        }
     }
 }

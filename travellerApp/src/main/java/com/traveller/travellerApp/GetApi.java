@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDateTime;
+// import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
 // import java.util.concurrent.ExecutorService;
@@ -101,7 +101,7 @@ public class GetApi {
             state.setDetails(rs.getString("placedetails"));
             list2.add(state);
             StateKafka state2 = new StateKafka();
-            state2.setSearchTimestamp(LocalDateTime.now());
+            // state2.setSearchTimestamp(LocalDateTime.now());
             state2.setSearchId(uuid);
             state2.setState(rs.getString("state"));
             state2.setStateId(rs.getString("stateid"));
@@ -158,7 +158,7 @@ public class GetApi {
             place2.setPlaceName(rs.getString("placename"));
             place2.setPlaceid(rs.getString("placeid"));
             place2.setDetails(rs.getString("placedetails"));
-            place2.setSearchTimestamp(LocalDateTime.now());
+            // place2.setSearchTimestamp(LocalDateTime.now());
             kafkaProducer.sendMessage(place2.toString());
             // executor.submit(() -> {
             // for (Place pstate : list3) {

@@ -1,11 +1,11 @@
-2023-12-31T08:23:49.224+05:30  INFO 21968 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 21968 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:23:49.232+05:30  INFO 21968 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:23:50.298+05:30  INFO 21968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:23:50.316+05:30  INFO 21968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:23:50.317+05:30  INFO 21968 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:23:50.380+05:30  INFO 21968 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:23:50.381+05:30  INFO 21968 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
-2023-12-31T08:23:50.515+05:30  INFO 21968 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T08:57:44.754+05:30  INFO 16220 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 16220 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T08:57:44.765+05:30  INFO 16220 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T08:57:46.521+05:30  INFO 16220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T08:57:46.541+05:30  INFO 16220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T08:57:46.542+05:30  INFO 16220 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T08:57:46.661+05:30  INFO 16220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T08:57:46.662+05:30  INFO 16220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1806 ms
+2024-01-27T08:57:46.866+05:30  INFO 16220 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -95,25 +95,25 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:23:50.603+05:30  INFO 21968 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:23:50.678+05:30  INFO 21968 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:23:50.683+05:30  INFO 21968 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:23:50.683+05:30  INFO 21968 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703991230674
-2023-12-31T08:23:51.188+05:30  INFO 21968 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:23:51.190+05:30  INFO 21968 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18002 with epoch 0
-2023-12-31T08:23:51.216+05:30  INFO 21968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:23:51.221+05:30  INFO 21968 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 2.448 seconds (process running for 2.905)
-2023-12-31T08:24:27.171+05:30  INFO 21968 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:24:27.172+05:30  INFO 21968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:24:27.174+05:30  INFO 21968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-31T08:25:08.340+05:30  INFO 23240 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 23240 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:25:08.340+05:30  INFO 23240 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:25:09.142+05:30  INFO 23240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:25:09.150+05:30  INFO 23240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:25:09.150+05:30  INFO 23240 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:25:09.205+05:30  INFO 23240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:25:09.205+05:30  INFO 23240 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
-2023-12-31T08:25:09.292+05:30  INFO 23240 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T08:57:47.107+05:30  INFO 16220 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T08:57:47.232+05:30  INFO 16220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T08:57:47.234+05:30  INFO 16220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T08:57:47.235+05:30  INFO 16220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706326067229
+2024-01-27T08:57:48.095+05:30  INFO 16220 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T08:57:48.098+05:30  INFO 16220 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 48001 with epoch 0
+2024-01-27T08:57:48.203+05:30  INFO 16220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T08:57:48.218+05:30  INFO 16220 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.179 seconds (process running for 5.029)
+2024-01-27T08:58:33.485+05:30  INFO 16220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T08:58:33.486+05:30  INFO 16220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T08:58:33.489+05:30  INFO 16220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-01-27T09:08:38.530+05:30  INFO 12124 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 12124 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T09:08:38.533+05:30  INFO 12124 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T09:08:40.159+05:30  INFO 12124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T09:08:40.188+05:30  INFO 12124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T09:08:40.189+05:30  INFO 12124 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T09:08:40.313+05:30  INFO 12124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T09:08:40.314+05:30  INFO 12124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1721 ms
+2024-01-27T09:08:40.500+05:30  INFO 12124 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -203,25 +203,26 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:25:09.364+05:30  INFO 23240 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:25:09.418+05:30  INFO 23240 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:25:09.419+05:30  INFO 23240 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:25:09.419+05:30  INFO 23240 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703991309417
-2023-12-31T08:25:09.772+05:30  INFO 23240 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:25:09.773+05:30  INFO 23240 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18003 with epoch 0
-2023-12-31T08:25:09.885+05:30  INFO 23240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:25:09.891+05:30  INFO 23240 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 1.931 seconds (process running for 2.247)
-2023-12-31T08:25:18.491+05:30  INFO 23240 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:25:18.492+05:30  INFO 23240 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:25:18.494+05:30  INFO 23240 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-31T08:44:35.454+05:30  INFO 16648 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 16648 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:44:35.456+05:30  INFO 16648 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:44:36.747+05:30  INFO 16648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:44:36.767+05:30  INFO 16648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:44:36.768+05:30  INFO 16648 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:44:36.868+05:30  INFO 16648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:44:36.868+05:30  INFO 16648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
-2023-12-31T08:44:37.018+05:30  INFO 16648 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T09:08:40.708+05:30  INFO 12124 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T09:08:40.832+05:30  INFO 12124 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T09:08:40.838+05:30  INFO 12124 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T09:08:40.838+05:30  INFO 12124 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706326720829
+2024-01-27T09:08:41.414+05:30  INFO 12124 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T09:08:41.416+05:30  INFO 12124 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 49001 with epoch 0
+2024-01-27T09:08:41.503+05:30  INFO 12124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T09:08:41.513+05:30  INFO 12124 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.634 seconds (process running for 4.299)
+2024-01-27T09:13:04.368+05:30  INFO 12124 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T09:13:04.377+05:30  INFO 12124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T09:13:04.401+05:30  INFO 12124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2024-01-27T09:17:41.491+05:30  INFO 12124 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-01-27T10:28:14.253+05:30  INFO 7304 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 7304 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T10:28:14.256+05:30  INFO 7304 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T10:28:16.470+05:30  INFO 7304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T10:28:16.498+05:30  INFO 7304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T10:28:16.499+05:30  INFO 7304 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T10:28:16.655+05:30  INFO 7304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T10:28:16.656+05:30  INFO 7304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2316 ms
+2024-01-27T10:28:16.882+05:30  INFO 7304 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -311,25 +312,25 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:44:37.322+05:30  INFO 16648 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:44:37.527+05:30  INFO 16648 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:44:37.533+05:30  INFO 16648 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:44:37.534+05:30  INFO 16648 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703992477522
-2023-12-31T08:44:38.109+05:30  INFO 16648 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:44:38.110+05:30  INFO 16648 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18004 with epoch 0
-2023-12-31T08:44:38.353+05:30  INFO 16648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:44:38.370+05:30  INFO 16648 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.633 seconds (process running for 4.267)
-2023-12-31T08:45:07.904+05:30  INFO 16648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:45:07.910+05:30  INFO 16648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:45:07.914+05:30  INFO 16648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-31T08:48:29.085+05:30  INFO 13228 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 13228 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:48:29.087+05:30  INFO 13228 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:48:30.922+05:30  INFO 13228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:48:30.950+05:30  INFO 13228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:48:30.951+05:30  INFO 13228 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:48:31.145+05:30  INFO 13228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:48:31.146+05:30  INFO 13228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1991 ms
-2023-12-31T08:48:31.419+05:30  INFO 13228 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T10:28:17.212+05:30  INFO 7304 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T10:28:17.371+05:30  INFO 7304 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T10:28:17.374+05:30  INFO 7304 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T10:28:17.375+05:30  INFO 7304 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706331497366
+2024-01-27T10:28:18.120+05:30  INFO 7304 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T10:28:18.122+05:30  INFO 7304 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 50001 with epoch 0
+2024-01-27T10:28:18.179+05:30  INFO 7304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T10:28:18.190+05:30  INFO 7304 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.775 seconds (process running for 5.745)
+2024-01-27T10:29:32.115+05:30  INFO 7304 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T10:29:32.116+05:30  INFO 7304 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T10:29:32.120+05:30  INFO 7304 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-27T10:38:05.516+05:30  INFO 23156 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 23156 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T10:38:05.518+05:30  INFO 23156 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T10:38:07.309+05:30  INFO 23156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T10:38:07.343+05:30  INFO 23156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T10:38:07.343+05:30  INFO 23156 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T10:38:07.511+05:30  INFO 23156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T10:38:07.513+05:30  INFO 23156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1932 ms
+2024-01-27T10:38:07.948+05:30  INFO 23156 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -419,25 +420,25 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:48:31.766+05:30  INFO 13228 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:48:31.970+05:30  INFO 13228 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:48:31.972+05:30  INFO 13228 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:48:31.973+05:30  INFO 13228 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703992711966
-2023-12-31T08:48:32.697+05:30  INFO 13228 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:48:32.698+05:30  INFO 13228 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18005 with epoch 0
-2023-12-31T08:48:32.777+05:30  INFO 13228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:48:32.787+05:30  INFO 13228 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.542 seconds (process running for 5.201)
-2023-12-31T08:49:23.601+05:30  INFO 13228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:49:23.603+05:30  INFO 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:49:23.610+05:30  INFO 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2023-12-31T08:53:04.239+05:30  INFO 22420 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 22420 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:53:04.242+05:30  INFO 22420 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:53:05.715+05:30  INFO 22420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:53:05.727+05:30  INFO 22420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:53:05.728+05:30  INFO 22420 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:53:05.791+05:30  INFO 22420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:53:05.792+05:30  INFO 22420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1477 ms
-2023-12-31T08:53:06.100+05:30  INFO 22420 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T10:38:08.194+05:30  INFO 23156 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T10:38:08.374+05:30  INFO 23156 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T10:38:08.378+05:30  INFO 23156 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T10:38:08.378+05:30  INFO 23156 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706332088370
+2024-01-27T10:38:09.099+05:30  INFO 23156 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T10:38:09.101+05:30  INFO 23156 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 51001 with epoch 0
+2024-01-27T10:38:09.162+05:30  INFO 23156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T10:38:09.180+05:30  INFO 23156 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.274 seconds (process running for 4.795)
+2024-01-27T10:39:12.678+05:30  INFO 23156 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T10:39:12.679+05:30  INFO 23156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T10:39:12.681+05:30  INFO 23156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-27T11:37:34.901+05:30  INFO 23556 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 23556 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T11:37:34.907+05:30  INFO 23556 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T11:37:36.674+05:30  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T11:37:36.691+05:30  INFO 23556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T11:37:36.691+05:30  INFO 23556 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T11:37:36.793+05:30  INFO 23556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T11:37:36.794+05:30  INFO 23556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1778 ms
+2024-01-27T11:37:36.974+05:30  INFO 23556 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -527,25 +528,26 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:53:06.309+05:30  INFO 22420 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:53:06.694+05:30  INFO 22420 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:53:06.698+05:30  INFO 22420 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:53:06.699+05:30  INFO 22420 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703992986686
-2023-12-31T08:53:07.701+05:30  INFO 22420 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:53:07.703+05:30  INFO 22420 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18006 with epoch 0
-2023-12-31T08:53:07.964+05:30  INFO 22420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:53:07.975+05:30  INFO 22420 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.36 seconds (process running for 4.851)
-2023-12-31T08:53:10.024+05:30  INFO 22420 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:53:10.025+05:30  INFO 22420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:53:10.027+05:30  INFO 22420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-12-31T08:58:17.970+05:30  INFO 24428 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 24428 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:58:17.972+05:30  INFO 24428 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:58:18.767+05:30  INFO 24428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:58:18.776+05:30  INFO 24428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:58:18.776+05:30  INFO 24428 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:58:18.825+05:30  INFO 24428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:58:18.825+05:30  INFO 24428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 820 ms
-2023-12-31T08:58:18.910+05:30  INFO 24428 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T11:37:37.151+05:30  INFO 23556 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T11:37:37.248+05:30  INFO 23556 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T11:37:37.251+05:30  INFO 23556 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T11:37:37.251+05:30  INFO 23556 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706335657245
+2024-01-27T11:37:37.994+05:30  INFO 23556 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T11:37:37.997+05:30  INFO 23556 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 52001 with epoch 0
+2024-01-27T11:37:38.081+05:30  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T11:37:38.092+05:30  INFO 23556 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.123 seconds (process running for 4.821)
+2024-01-27T11:38:33.108+05:30  INFO 23556 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T11:38:33.108+05:30  INFO 23556 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T11:38:33.110+05:30  INFO 23556 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-27T11:46:38.067+05:30  INFO 23556 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-01-27T12:00:00.686+05:30  INFO 20920 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 20920 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T12:00:00.701+05:30  INFO 20920 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T12:00:02.793+05:30  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T12:00:02.813+05:30  INFO 20920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T12:00:02.814+05:30  INFO 20920 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T12:00:02.918+05:30  INFO 20920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T12:00:02.919+05:30  INFO 20920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2109 ms
+2024-01-27T12:00:03.181+05:30  INFO 20920 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -635,25 +637,30 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:58:18.989+05:30  INFO 24428 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:58:19.048+05:30  INFO 24428 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:58:19.050+05:30  INFO 24428 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:58:19.050+05:30  INFO 24428 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703993299046
-2023-12-31T08:58:19.394+05:30  INFO 24428 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:58:19.397+05:30  INFO 24428 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18007 with epoch 0
-2023-12-31T08:58:19.581+05:30  INFO 24428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:58:19.597+05:30  INFO 24428 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 1.961 seconds (process running for 2.243)
-2023-12-31T08:58:36.953+05:30  INFO 24428 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T08:58:36.954+05:30  INFO 24428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T08:58:36.956+05:30  INFO 24428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-31T08:59:52.112+05:30  INFO 21072 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 21072 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp\travellerApp)
-2023-12-31T08:59:52.114+05:30  INFO 21072 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-31T08:59:52.944+05:30  INFO 21072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-31T08:59:52.956+05:30  INFO 21072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-31T08:59:52.956+05:30  INFO 21072 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-31T08:59:53.017+05:30  INFO 21072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-31T08:59:53.017+05:30  INFO 21072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 865 ms
-2023-12-31T08:59:53.093+05:30  INFO 21072 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-01-27T12:00:03.374+05:30  INFO 20920 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T12:00:03.473+05:30  INFO 20920 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T12:00:03.477+05:30  INFO 20920 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T12:00:03.478+05:30  INFO 20920 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706337003470
+2024-01-27T12:00:04.205+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T12:00:04.207+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 53001 with epoch 0
+2024-01-27T12:00:04.380+05:30  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T12:00:04.391+05:30  INFO 20920 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.71 seconds (process running for 5.483)
+2024-01-27T12:01:36.812+05:30  INFO 20920 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T12:01:36.816+05:30  INFO 20920 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T12:01:36.821+05:30  INFO 20920 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-27T12:21:20.642+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-01-27T12:21:20.651+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-01-27T13:00:38.697+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-01-27T13:39:13.738+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-01-27T19:10:22.244+05:30  INFO 20920 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-01-27T20:24:42.898+05:30  INFO 19584 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 19584 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T20:24:42.901+05:30  INFO 19584 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T20:24:44.840+05:30  INFO 19584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T20:24:44.859+05:30  INFO 19584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T20:24:44.860+05:30  INFO 19584 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T20:24:44.965+05:30  INFO 19584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T20:24:44.965+05:30  INFO 19584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1971 ms
+2024-01-27T20:24:45.163+05:30  INFO 19584 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -743,14 +750,607 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-31T08:59:53.172+05:30  INFO 21072 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-31T08:59:53.217+05:30  INFO 21072 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-31T08:59:53.218+05:30  INFO 21072 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-31T08:59:53.218+05:30  INFO 21072 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703993393215
-2023-12-31T08:59:53.616+05:30  INFO 21072 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
-2023-12-31T08:59:53.619+05:30  INFO 21072 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 18008 with epoch 0
-2023-12-31T08:59:53.762+05:30  INFO 21072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-31T08:59:53.768+05:30  INFO 21072 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 2.004 seconds (process running for 2.267)
-2023-12-31T09:00:01.781+05:30  INFO 21072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-31T09:00:01.781+05:30  INFO 21072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-31T09:00:01.782+05:30  INFO 21072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-27T20:24:45.357+05:30  INFO 19584 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T20:24:45.472+05:30  INFO 19584 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T20:24:45.476+05:30  INFO 19584 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T20:24:45.477+05:30  INFO 19584 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706367285469
+2024-01-27T20:24:46.223+05:30  INFO 19584 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T20:24:46.224+05:30  INFO 19584 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 54001 with epoch 0
+2024-01-27T20:24:46.281+05:30  INFO 19584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T20:24:46.295+05:30  INFO 19584 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.172 seconds (process running for 4.766)
+2024-01-27T20:38:41.721+05:30  INFO 17368 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 17368 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T20:38:41.724+05:30  INFO 17368 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T20:38:43.091+05:30  INFO 17368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T20:38:43.104+05:30  INFO 17368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T20:38:43.104+05:30  INFO 17368 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T20:38:43.184+05:30  INFO 17368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T20:38:43.185+05:30  INFO 17368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1393 ms
+2024-01-27T20:38:43.329+05:30  INFO 17368 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-01-27T20:38:43.496+05:30  INFO 17368 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T20:38:43.576+05:30  INFO 17368 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T20:38:43.578+05:30  INFO 17368 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T20:38:43.578+05:30  INFO 17368 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706368123573
+2024-01-27T20:38:44.081+05:30  INFO 17368 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T20:38:44.084+05:30  INFO 17368 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 54002 with epoch 0
+2024-01-27T20:38:44.219+05:30  INFO 17368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T20:38:44.229+05:30  INFO 17368 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.132 seconds (process running for 3.621)
+2024-01-27T20:39:25.250+05:30  INFO 17368 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T20:39:25.252+05:30  INFO 17368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T20:39:25.255+05:30  INFO 17368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-01-27T20:45:08.010+05:30 ERROR 17368 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.toString()" because the return value of "com.traveller.travellerApp.PlaceKafka.getSearchTimestamp()" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.toString()" because the return value of "com.traveller.travellerApp.PlaceKafka.getSearchTimestamp()" is null
+	at com.traveller.travellerApp.PlaceKafka.toString(Destination.java:306) ~[main/:na]
+	at com.traveller.travellerApp.GetApi.display3(GetApi.java:162) ~[main/:na]
+	at com.traveller.travellerApp.GetApi.getPlaceDetailsByName(GetApi.java:133) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2024-01-27T20:47:02.774+05:30  INFO 10624 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 10624 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T20:47:02.777+05:30  INFO 10624 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T20:47:04.336+05:30  INFO 10624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T20:47:04.352+05:30  INFO 10624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T20:47:04.353+05:30  INFO 10624 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T20:47:04.442+05:30  INFO 10624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T20:47:04.442+05:30  INFO 10624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1601 ms
+2024-01-27T20:47:04.605+05:30  INFO 10624 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-01-27T20:47:04.817+05:30  INFO 10624 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T20:47:04.893+05:30  INFO 10624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T20:47:04.895+05:30  INFO 10624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T20:47:04.895+05:30  INFO 10624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706368624891
+2024-01-27T20:47:05.435+05:30  INFO 10624 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T20:47:05.436+05:30  INFO 10624 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 54003 with epoch 0
+2024-01-27T20:47:05.542+05:30  INFO 10624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T20:47:05.553+05:30  INFO 10624 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.394 seconds (process running for 3.904)
+2024-01-27T20:47:17.665+05:30  INFO 10624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T20:47:17.666+05:30  INFO 10624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T20:47:17.668+05:30  INFO 10624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-27T20:48:49.543+05:30  INFO 22580 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 22580 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T20:48:49.545+05:30  INFO 22580 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T20:48:51.197+05:30  INFO 22580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T20:48:51.222+05:30  INFO 22580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T20:48:51.223+05:30  INFO 22580 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T20:48:51.371+05:30  INFO 22580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T20:48:51.372+05:30  INFO 22580 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1756 ms
+2024-01-27T20:48:51.578+05:30  INFO 22580 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-01-27T20:48:51.789+05:30  INFO 22580 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T20:48:51.901+05:30  INFO 22580 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T20:48:51.904+05:30  INFO 22580 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T20:48:51.905+05:30  INFO 22580 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706368731898
+2024-01-27T20:48:52.671+05:30  INFO 22580 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T20:48:52.673+05:30  INFO 22580 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 54004 with epoch 0
+2024-01-27T20:48:52.700+05:30  INFO 22580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T20:48:52.714+05:30  INFO 22580 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.853 seconds (process running for 4.372)
+2024-01-27T20:48:58.673+05:30  INFO 22580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T20:48:58.673+05:30  INFO 22580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T20:48:58.674+05:30  INFO 22580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-27T20:59:52.625+05:30  INFO 10780 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 10780 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T20:59:52.629+05:30  INFO 10780 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T20:59:54.526+05:30  INFO 10780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T20:59:54.549+05:30  INFO 10780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T20:59:54.551+05:30  INFO 10780 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T20:59:54.654+05:30  INFO 10780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T20:59:54.655+05:30  INFO 10780 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1929 ms
+2024-01-27T20:59:54.829+05:30  INFO 10780 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-01-27T20:59:55.029+05:30  INFO 10780 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T20:59:55.140+05:30  INFO 10780 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T20:59:55.144+05:30  INFO 10780 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T20:59:55.145+05:30  INFO 10780 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706369395134
+2024-01-27T20:59:55.882+05:30  INFO 10780 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T20:59:55.883+05:30  INFO 10780 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 55001 with epoch 0
+2024-01-27T20:59:55.953+05:30  INFO 10780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T20:59:55.966+05:30  INFO 10780 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.268 seconds (process running for 4.908)
+2024-01-27T21:00:35.946+05:30  INFO 10780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T21:00:35.946+05:30  INFO 10780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T21:00:35.948+05:30  INFO 10780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-27T21:09:02.192+05:30  INFO 10780 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-01-27T21:10:55.699+05:30  INFO 19116 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 19116 (C:\Users\chinm\Downloads\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\travellerApp\travellerApp)
+2024-01-27T21:10:55.701+05:30  INFO 19116 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-01-27T21:10:57.204+05:30  INFO 19116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-27T21:10:57.219+05:30  INFO 19116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-27T21:10:57.219+05:30  INFO 19116 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-01-27T21:10:57.332+05:30  INFO 19116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-27T21:10:57.332+05:30  INFO 19116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1563 ms
+2024-01-27T21:10:57.475+05:30  INFO 19116 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-01-27T21:10:57.641+05:30  INFO 19116 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-01-27T21:10:57.734+05:30  INFO 19116 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-01-27T21:10:57.736+05:30  INFO 19116 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-01-27T21:10:57.736+05:30  INFO 19116 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1706370057732
+2024-01-27T21:10:58.283+05:30  INFO 19116 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: SVd-hgikRnu4I8FoIVCSww
+2024-01-27T21:10:58.286+05:30  INFO 19116 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 55003 with epoch 0
+2024-01-27T21:10:58.440+05:30  INFO 19116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-27T21:10:58.452+05:30  INFO 19116 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.384 seconds (process running for 3.893)
+2024-01-27T21:11:07.450+05:30  INFO 19116 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-27T21:11:07.451+05:30  INFO 19116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-27T21:11:07.452+05:30  INFO 19116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
