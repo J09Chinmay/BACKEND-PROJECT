@@ -1,14 +1,8 @@
 package com.traveller.travellerApp.Object;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
 @Entity
 @Data

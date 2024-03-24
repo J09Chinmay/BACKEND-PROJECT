@@ -55,9 +55,6 @@ public class TravellerAppApplication {
 		log.info("this is a info message");
 		log.warn("this is a warn message");
 		log.error("this is a error message");
-		// TravellerAppApplication app = new TravellerAppApplication();
-		// app.connect();
-
 		SpringApplication.run(TravellerAppApplication.class, args);
 
 	}
