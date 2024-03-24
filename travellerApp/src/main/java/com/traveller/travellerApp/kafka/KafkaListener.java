@@ -1,4 +1,4 @@
-package com.traveller.travellerApp;
+package com.traveller.travellerApp.kafka;
 
 public @interface KafkaListener {
 

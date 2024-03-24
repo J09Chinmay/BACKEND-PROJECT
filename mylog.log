@@ -1,11 +1,11 @@
-2023-12-28T09:05:08.249+05:30  INFO 716 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 716 (C:\Users\chinm\Downloads\Project\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\Project\travellerApp)
-2023-12-28T09:05:08.260+05:30  INFO 716 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
-2023-12-28T09:05:09.742+05:30  INFO 716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-28T09:05:09.765+05:30  INFO 716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-28T09:05:09.767+05:30  INFO 716 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-28T09:05:09.886+05:30  INFO 716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-28T09:05:09.887+05:30  INFO 716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1522 ms
-2023-12-28T09:05:10.046+05:30  INFO 716 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2024-02-25T20:06:49.562+05:30  INFO 19760 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication using Java 19.0.2 with PID 19760 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\classes\java\main started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp)
+2024-02-25T20:06:49.576+05:30  INFO 19760 --- [main] c.t.t.TravellerAppApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-02-25T20:06:51.242+05:30  INFO 19760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T20:06:51.255+05:30  INFO 19760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-25T20:06:51.256+05:30  INFO 19760 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-25T20:06:51.345+05:30  INFO 19760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-25T20:06:51.346+05:30  INFO 19760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1656 ms
+2024-02-25T20:06:51.525+05:30  INFO 19760 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -95,33 +95,198 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-12-28T09:05:10.249+05:30  INFO 716 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-12-28T09:05:10.365+05:30  INFO 716 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2023-12-28T09:05:10.367+05:30  INFO 716 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2023-12-28T09:05:10.367+05:30  INFO 716 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1703734510362
-2023-12-28T09:05:11.059+05:30  INFO 716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-28T09:05:11.070+05:30  INFO 716 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.508 seconds (process running for 4.238)
-2023-12-28T09:05:11.128+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:11.130+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:11.131+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:11.242+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:11.243+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:11.244+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:11.352+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:11.352+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:11.353+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:11.589+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:11.591+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:11.593+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:11.945+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:11.947+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:11.948+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:12.809+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:12.810+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:12.811+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:13.851+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:13.853+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:13.854+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2023-12-28T09:05:14.832+05:30  INFO 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2023-12-28T09:05:14.833+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2023-12-28T09:05:14.834+05:30  WARN 716 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:51.679+05:30  INFO 19760 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-02-25T20:06:51.767+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-02-25T20:06:51.769+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-02-25T20:06:51.769+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1708871811765
+2024-02-25T20:06:51.772+05:30  INFO 19760 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-02-25T20:06:51.785+05:30  INFO 19760 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-2] Instantiated an idempotent producer.
+2024-02-25T20:06:51.793+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-02-25T20:06:51.794+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-02-25T20:06:51.795+05:30  INFO 19760 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1708871811793
+2024-02-25T20:06:52.451+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:52.451+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:52.456+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.456+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.458+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.458+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.572+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:52.572+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:52.573+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.573+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.576+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.576+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.681+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:52.681+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:52.682+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.683+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.683+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.683+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.838+05:30  INFO 19760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T20:06:52.851+05:30  INFO 19760 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.95 seconds (process running for 4.763)
+2024-02-25T20:06:52.857+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:52.857+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:52.859+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.859+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:52.860+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:52.860+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:53.216+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:53.218+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:53.219+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:53.279+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:53.280+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:53.281+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:54.081+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:54.081+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:54.083+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:54.083+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:54.084+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:54.085+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:55.002+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:55.003+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:55.004+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:55.252+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:55.254+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:55.255+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:55.924+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:55.925+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:55.926+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:56.235+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:56.237+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:56.238+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:56.973+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:56.975+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:56.976+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:57.221+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:57.222+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:57.222+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:58.146+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:58.147+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:58.147+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:58.211+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:58.213+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:58.215+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:59.130+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:06:59.131+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:59.132+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:06:59.381+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:06:59.384+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:06:59.386+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:00.116+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:07:00.118+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:00.134+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:00.241+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:07:00.243+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:00.244+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:00.989+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:07:00.990+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:00.991+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:01.168+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:07:01.170+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:01.173+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:01.980+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:07:01.982+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:01.983+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:02.293+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:07:02.295+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:02.296+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:03.087+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Node -1 disconnected.
+2024-02-25T20:07:03.089+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:03.090+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:03.275+05:30  INFO 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-02-25T20:07:03.275+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-25T20:07:03.277+05:30  WARN 19760 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-25T20:07:03.828+05:30  INFO 19760 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-02-25T20:07:03.833+05:30  INFO 19760 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-02-25T20:07:03.833+05:30  INFO 19760 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-02-25T20:07:03.834+05:30  INFO 19760 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-02-25T20:07:03.836+05:30  INFO 19760 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered

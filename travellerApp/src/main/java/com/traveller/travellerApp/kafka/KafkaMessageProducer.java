@@ -1,4 +1,4 @@
-package com.traveller.travellerApp;
+package com.traveller.travellerApp.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -33,3 +33,4 @@ public class KafkaMessageProducer {
     }
 
 }
+// enviroment properties
