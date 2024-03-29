@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import com.traveller.travellerApp.TravellerAppApplication;
 import com.traveller.travellerApp.Object.Place;
 import com.traveller.travellerApp.Object.State;
 import com.traveller.travellerApp.Values.Database_config;
@@ -21,36 +23,39 @@ public class GetApi {
 
     @Autowired
     private Db_Service db_Service;
-    @Autowired
-    private Database_config appConfig;
+    private TravellerAppApplication travellerAppApplication;
+    // @Autowired
+    // private Database_config appConfig;
 
-    public GetApi(Db_Service db_Service, Database_config appConfig) {
+    public GetApi(Db_Service db_Service, TravellerAppApplication travellerAppApplication) {
+        // , Database_config appConfig) {
+        this.travellerAppApplication = travellerAppApplication;
         this.db_Service = db_Service;
-        this.appConfig = appConfig;
+        // this.appConfig = appConfig;
     }
 
-    public Connection connection;
+    // public Connection connection;
 
-    @Autowired
-    public Connection connect() {
-        try {
-            String url = appConfig.getDatasourceUrl();
-            String user = appConfig.getDatasourceUsername();
-            String password = appConfig.getDatasourcePassword();
+    // @Autowired
+    // public Connection connect() {
+    // try {
+    // String url = appConfig.getDatasourceUrl();
+    // String user = appConfig.getDatasourceUsername();
+    // String password = appConfig.getDatasourcePassword();
 
-            log.info("Connected to PostgreSQL database Done.............");
-            return connection = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
-            log.error("Failed to connect to PostgreSQL database: " + e.getMessage());
-        }
-        return null;
-    }
+    // log.info("Connected to PostgreSQL database Done.............");
+    // return connection = DriverManager.getConnection(url, user, password);
+    // } catch (SQLException e) {
+    // log.error("Failed to connect to PostgreSQL database: " + e.getMessage());
+    // }
+    // return null;
+    // }
 
     @RequestMapping(value = "/api/GetState/{stateName}")
     public ArrayList<State> getPopularPlace(@PathVariable("stateName") String stateName) {
         try {
             log.info("Respond ok!!");
-            return db_Service.stateService(stateName, connection);
+            return db_Service.stateService(stateName, travellerAppApplication.connect());
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -61,7 +66,7 @@ public class GetApi {
     public ArrayList<Place> getPlaceDetailsByName(@PathVariable("placeName") String placeName) {
         try {
             log.info("Respond ok!!");
-            return db_Service.placeService(placeName, connection);
+            return db_Service.placeService(placeName, travellerAppApplication.connect());
         } catch (Exception e) {
             System.out.println(e);
             return null;

@@ -1,1115 +1,407 @@
-2024-03-28T00:00:05.229+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.
-2024-03-28T00:00:05.469+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:29.799+05:30  INFO 13200 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 13200 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
+2024-03-29T15:29:29.814+05:30  INFO 13200 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
+2024-03-29T15:29:31.351+05:30  INFO 13200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-29T15:29:31.361+05:30  INFO 13200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-29T15:29:31.362+05:30  INFO 13200 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-03-29T15:29:31.458+05:30  INFO 13200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-29T15:29:31.459+05:30  INFO 13200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2024-03-29T15:29:31.609+05:30  INFO 13200 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.TravellerAppApplication.connect()
+2024-03-29T15:29:31.613+05:30  INFO 13200 --- [main] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:29:31.985+05:30  INFO 13200 --- [main] c.t.t.kafka.KafkaMessageProducer         : Kafka producer started...
+2024-03-29T15:29:32.095+05:30  INFO 13200 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-03-29T15:29:32.359+05:30  INFO 13200 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-03-29T15:29:32.449+05:30  INFO 13200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-03-29T15:29:32.456+05:30  INFO 13200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-03-29T15:29:32.456+05:30  INFO 13200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1711706372448
+2024-03-29T15:29:33.721+05:30  INFO 13200 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-03-29T15:29:33.731+05:30  INFO 13200 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 90002 with epoch 0
+2024-03-29T15:29:34.014+05:30  INFO 13200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-29T15:29:34.022+05:30  INFO 13200 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.886 seconds (process running for 5.548)
+2024-03-29T15:29:42.440+05:30  INFO 13200 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-29T15:29:42.441+05:30  INFO 13200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-29T15:29:42.443+05:30  INFO 13200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-03-29T15:29:42.515+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
+2024-03-29T15:29:42.515+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:29:42.663+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Famous beach with a spiritual touch, known for the Jagannath Temple",
   "stateid" : "OD",
   "placeName" : "Puri Beach",
   "placeId" : "1",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.476+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.731+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "UNESCO World Heritage Site, architectural marvel dedicated to the Sun God",
   "stateid" : "OD",
   "placeName" : "Konark Sun Temple",
   "placeId" : "2",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.483+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.739+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Asia largest brackish water lagoon, famous for bird watching",
   "stateid" : "OD",
   "placeName" : "Chilika Lake",
   "placeId" : "3",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.487+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.744+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "One of the oldest and largest temples in Bhubaneswar",
   "stateid" : "OD",
   "placeName" : "Lingaraja Temple",
   "placeId" : "4",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.494+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.746+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Peace Pagoda built in the Kalinga architectural style",
   "stateid" : "OD",
   "placeName" : "Dhauli Shanti Stupa",
   "placeId" : "5",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.497+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.747+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Famous zoo with a white tiger safari and botanical garden",
   "stateid" : "OD",
   "placeName" : "Nandankanan Zoological Park",
   "placeId" : "6",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.501+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.760+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Ancient rock-cut caves with Jain and Buddhist influence",
   "stateid" : "OD",
   "placeName" : "Udayagiri and Khandagiri Caves",
   "placeId" : "7",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.507+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.762+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Famous for Pattachitra paintings and traditional crafts",
   "stateid" : "OD",
   "placeName" : "Raghurajpur Crafts Village",
   "placeId" : "8",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.511+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.768+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "Tiger reserve and wildlife sanctuary with lush greenery",
   "stateid" : "OD",
   "placeName" : "Simlipal National Park",
   "placeId" : "9",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.517+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.777+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "One of the longest dams in the world, built across the Mahanadi River",
   "stateid" : "OD",
   "placeName" : "Hirakud Dam",
   "placeId" : "10",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:05.520+05:30  INFO 24332 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:29:42.779+05:30  INFO 13200 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Odisha",
   "placedetails" : "A beautiful city",
   "stateid" : "OD",
   "placeName" : "Rairangpur",
   "placeId" : "92",
-  "searchId" : "02d37d95-b46e-46b1-a2fc-5e734b6ee994"
+  "searchId" : "f26bd237-9f90-4f61-8715-06c8bc06341e"
 }
-2024-03-28T00:00:19.079+05:30  INFO 24332 --- [http-nio-8080-exec-5] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.
-2024-03-28T00:00:19.247+05:30  INFO 24332 --- [http-nio-8080-exec-5] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'xyz': {
-  "state" : "Jharkhand",
-  "placedetails" : "Oldest national park in Jharkhand",
-  "stateid" : "JH",
-  "placeName" : "Betla National Park",
-  "placeId" : "31",
-  "searchId" : "c319d1a1-2906-460a-8dbc-d1df0e614c57"
-}
-2024-03-28T00:00:20.722+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition abc-0 to 0 since the associated topicId changed from null to iovtSA9aQoWxsB1PaCka8w
-2024-03-28T00:00:39.465+05:30  INFO 24332 --- [http-nio-8080-exec-7] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.
-2024-03-28T00:00:39.705+05:30  INFO 24332 --- [http-nio-8080-exec-7] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'xyz': {
-  "state" : "Odisha",
-  "placedetails" : "A beautiful city",
-  "stateid" : "OD",
-  "placeName" : "Rairangpur",
-  "placeId" : "92",
-  "searchId" : "2420c88c-b463-444f-96ed-661f13f9c6b9"
-}
-2024-03-28T00:01:22.714+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2024-03-28T00:01:22.763+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:22.764+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Cancelled in-flight METADATA request with correlation id 39 due to node 0 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, request timeout: 30000ms)
-2024-03-28T00:01:24.917+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:24.921+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:27.121+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:27.122+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:29.399+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:29.401+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:32.027+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:32.028+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:34.991+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:34.992+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:38.186+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:38.188+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:41.385+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:41.386+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:44.325+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:44.326+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:47.420+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:47.423+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:50.380+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:50.381+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:53.263+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:53.264+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:56.484+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:56.485+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:01:59.437+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:01:59.442+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:02.338+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:02.340+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:05.365+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:05.366+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:08.542+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:08.544+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:11.488+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:11.489+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:14.460+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:14.462+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:17.553+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:17.557+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:20.579+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:20.581+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:23.555+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:23.575+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:26.771+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:26.778+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:29.755+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:29.757+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:32.958+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:32.960+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:36.068+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:36.071+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:39.094+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:39.095+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:42.198+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:42.199+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:45.450+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:45.453+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:48.723+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:48.724+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:52.008+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:52.014+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:54.897+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:54.899+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:02:57.977+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:02:57.978+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:00.941+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:00.943+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:04.152+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:04.155+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:07.109+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:07.111+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:10.046+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:10.048+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:13.125+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:13.127+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:16.245+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:16.246+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:19.252+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:19.276+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:22.189+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:22.190+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:25.203+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:25.205+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:28.401+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:28.402+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:31.394+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:31.396+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:34.484+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:34.485+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:37.396+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:37.398+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:40.622+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:40.623+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:43.598+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:43.601+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:46.773+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:46.773+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:49.944+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:49.945+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:52.975+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:52.976+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:55.940+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:55.941+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:03:58.864+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:03:58.868+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:01.914+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:01.916+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:05.019+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:05.021+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:08.093+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:08.095+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:11.326+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:11.327+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:14.287+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:14.288+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:17.188+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:17.189+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:20.418+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:20.418+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:23.457+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:23.458+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:26.346+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:26.352+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:29.323+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:29.325+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:32.286+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:32.286+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:35.451+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:35.451+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:38.543+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:38.544+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:41.728+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:41.729+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:44.877+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:44.878+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:47.985+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:47.986+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:51.202+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:51.204+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:54.154+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:54.155+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:04:57.400+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:04:57.402+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:00.407+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:00.409+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:03.379+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:03.380+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:06.332+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:06.345+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:09.494+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:09.495+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:12.420+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:12.426+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:15.449+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:15.451+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:18.604+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:18.606+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:21.697+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:21.698+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:24.767+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:24.769+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:27.842+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:27.844+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:30.867+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:30.869+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:34.056+05:30  INFO 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
-2024-03-28T00:05:34.059+05:30  WARN 24332 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09.mshome.net/172.31.48.1:9092) could not be established. Broker may not be available.
-2024-03-28T00:05:35.500+05:30  INFO 24332 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
-2024-03-28T00:05:35.501+05:30  INFO 24332 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-03-28T00:05:35.506+05:30  INFO 24332 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-03-28T00:05:35.507+05:30  INFO 24332 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-03-28T00:05:35.508+05:30  INFO 24332 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-03-28T00:05:35.509+05:30  INFO 24332 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-03-28T00:05:35.510+05:30  INFO 24332 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
-2024-03-28T08:46:34.402+05:30  INFO 5964 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 5964 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T08:46:34.405+05:30  INFO 5964 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T08:46:35.910+05:30  INFO 5964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T08:46:35.918+05:30  INFO 5964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T08:46:35.918+05:30  INFO 5964 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T08:46:35.976+05:30  INFO 5964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T08:46:35.976+05:30  INFO 5964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1445 ms
-2024-03-28T08:46:36.067+05:30  WARN 5964 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'getApi' defined in URL [jar:nested:/C:/Users/chinm/Downloads/PROJECT/travellerApp/travellerApp/build/libs/travellerApp-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/traveller/travellerApp/Api_Controller/GetApi.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'db_Service' defined in URL [jar:nested:/C:/Users/chinm/Downloads/PROJECT/travellerApp/travellerApp/build/libs/travellerApp-0.0.1-SNAPSHOT.jar/!BOOT-INF/classes/!/com/traveller/travellerApp/db/Db_Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'place_db': Unsatisfied dependency expressed through method 'display2' parameter 0: No qualifying bean of type 'java.sql.ResultSet' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2024-03-28T08:46:36.076+05:30  INFO 5964 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-03-28T08:46:36.099+05:30  INFO 5964 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-03-28T08:46:36.148+05:30 ERROR 5964 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of method display2 in com.traveller.travellerApp.db.Place_db required a bean of type 'java.sql.ResultSet' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'java.sql.ResultSet' in your configuration.
-
-2024-03-28T08:48:00.660+05:30  INFO 12680 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 12680 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T08:48:00.663+05:30  INFO 12680 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T08:48:01.978+05:30  INFO 12680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T08:48:01.994+05:30  INFO 12680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T08:48:01.994+05:30  INFO 12680 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T08:48:02.061+05:30  INFO 12680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T08:48:02.061+05:30  INFO 12680 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
-2024-03-28T08:48:02.188+05:30  INFO 12680 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.db.Db_Service.connect()
-2024-03-28T08:48:02.188+05:30  INFO 12680 --- [main] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:48:02.979+05:30  INFO 12680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T08:48:02.997+05:30  INFO 12680 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.032 seconds (process running for 3.731)
-2024-03-28T08:49:05.153+05:30  INFO 1412 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 1412 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T08:49:05.158+05:30  INFO 1412 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T08:49:06.578+05:30  INFO 1412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T08:49:06.588+05:30  INFO 1412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T08:49:06.589+05:30  INFO 1412 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T08:49:06.692+05:30  INFO 1412 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T08:49:06.694+05:30  INFO 1412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1375 ms
-2024-03-28T08:49:06.813+05:30  INFO 1412 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.db.Db_Service.connect()
-2024-03-28T08:49:06.816+05:30  INFO 1412 --- [main] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:49:07.698+05:30  INFO 1412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T08:49:07.711+05:30  INFO 1412 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.235 seconds (process running for 5.357)
-2024-03-28T08:49:17.507+05:30  INFO 1412 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T08:49:17.510+05:30  INFO 1412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T08:49:17.515+05:30  INFO 1412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-28T08:49:17.626+05:30  INFO 1412 --- [http-nio-8080-exec-1] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:49:17.776+05:30  INFO 1412 --- [http-nio-8080-exec-1] c.traveller.travellerApp.db.Db_Service   : [com.traveller.travellerApp.Object.State@5f962cc4, com.traveller.travellerApp.Object.State@1fd41b9f, com.traveller.travellerApp.Object.State@6a5b9e3]
-2024-03-28T08:50:04.766+05:30  INFO 1632 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 1632 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T08:50:04.768+05:30  INFO 1632 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T08:50:06.248+05:30  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T08:50:06.257+05:30  INFO 1632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T08:50:06.257+05:30  INFO 1632 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T08:50:06.312+05:30  INFO 1632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T08:50:06.313+05:30  INFO 1632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1435 ms
-2024-03-28T08:50:06.406+05:30  INFO 1632 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.db.Db_Service.connect()
-2024-03-28T08:50:06.410+05:30  INFO 1632 --- [main] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:50:07.210+05:30  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T08:50:07.233+05:30  INFO 1632 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.185 seconds (process running for 3.842)
-2024-03-28T08:50:11.287+05:30  INFO 1632 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T08:50:11.290+05:30  INFO 1632 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T08:50:11.291+05:30  INFO 1632 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-28T08:50:11.333+05:30  INFO 1632 --- [http-nio-8080-exec-1] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:58:57.696+05:30  INFO 22256 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 22256 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T08:58:57.699+05:30  INFO 22256 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T08:58:59.111+05:30  INFO 22256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T08:58:59.122+05:30  INFO 22256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T08:58:59.123+05:30  INFO 22256 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T08:58:59.190+05:30  INFO 22256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T08:58:59.191+05:30  INFO 22256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1383 ms
-2024-03-28T08:58:59.285+05:30  INFO 22256 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.db.Db_Service.connect()
-2024-03-28T08:58:59.289+05:30  INFO 22256 --- [main] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T08:59:00.257+05:30  INFO 22256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T08:59:00.266+05:30  INFO 22256 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.293 seconds (process running for 4.995)
-2024-03-28T08:59:02.762+05:30  INFO 22256 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T08:59:02.763+05:30  INFO 22256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T08:59:02.766+05:30  INFO 22256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-28T08:59:02.821+05:30  INFO 22256 --- [http-nio-8080-exec-1] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T09:00:47.360+05:30  INFO 20996 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 20996 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T09:00:47.363+05:30  INFO 20996 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T09:00:48.732+05:30  INFO 20996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T09:00:48.742+05:30  INFO 20996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T09:00:48.742+05:30  INFO 20996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T09:00:48.809+05:30  INFO 20996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T09:00:48.810+05:30  INFO 20996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1329 ms
-2024-03-28T09:00:48.922+05:30  INFO 20996 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.db.Db_Service.connect()
-2024-03-28T09:00:48.926+05:30  INFO 20996 --- [main] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T09:00:49.684+05:30  INFO 20996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T09:00:49.694+05:30  INFO 20996 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.174 seconds (process running for 3.813)
-2024-03-28T09:00:58.637+05:30  INFO 20996 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T09:00:58.638+05:30  INFO 20996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T09:00:58.641+05:30  INFO 20996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-28T09:00:58.684+05:30  INFO 20996 --- [http-nio-8080-exec-2] c.traveller.travellerApp.db.Db_Service   : Connected to PostgreSQL database Done.............
-2024-03-28T09:13:56.395+05:30  INFO 20004 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 20004 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T09:13:56.399+05:30  INFO 20004 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T09:13:57.969+05:30  INFO 20004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T09:13:57.979+05:30  INFO 20004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T09:13:57.980+05:30  INFO 20004 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T09:13:58.049+05:30  INFO 20004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T09:13:58.053+05:30  INFO 20004 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1523 ms
-2024-03-28T09:13:58.187+05:30  INFO 20004 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.Api_Controller.GetApi.connect()
-2024-03-28T09:13:58.192+05:30  INFO 20004 --- [main] c.t.travellerApp.Api_Controller.GetApi   : Connected to PostgreSQL database Done.............
-2024-03-28T09:13:59.228+05:30  INFO 20004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T09:13:59.241+05:30  INFO 20004 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.559 seconds (process running for 4.258)
-2024-03-28T09:14:02.562+05:30  INFO 20004 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T09:14:02.564+05:30  INFO 20004 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T09:14:02.565+05:30  INFO 20004 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-28T11:35:09.426+05:30  INFO 20896 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 20896 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T11:35:09.432+05:30  INFO 20896 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T11:35:11.201+05:30  INFO 20896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T11:35:11.213+05:30  INFO 20896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T11:35:11.214+05:30  INFO 20896 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T11:35:11.270+05:30  INFO 20896 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T11:35:11.272+05:30  INFO 20896 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1704 ms
-2024-03-28T11:35:11.382+05:30  INFO 20896 --- [main] c.t.t.kafka.KafkaMessageProducer         : Kafka producer started...
-2024-03-28T11:35:11.450+05:30  INFO 20896 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2024-03-28T11:35:11.690+05:30  INFO 20896 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2024-03-28T11:35:11.772+05:30  INFO 20896 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2024-03-28T11:35:11.782+05:30  INFO 20896 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2024-03-28T11:35:11.782+05:30  INFO 20896 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1711605911771
-2024-03-28T11:35:11.798+05:30  INFO 20896 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.Api_Controller.GetApi.connect()
-2024-03-28T11:35:11.801+05:30  INFO 20896 --- [main] c.t.travellerApp.Api_Controller.GetApi   : Connected to PostgreSQL database Done.............
-2024-03-28T11:35:12.417+05:30  INFO 20896 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
-2024-03-28T11:35:12.420+05:30  INFO 20896 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 89002 with epoch 0
-2024-03-28T11:35:12.902+05:30  INFO 20896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T11:35:12.912+05:30  INFO 20896 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.139 seconds (process running for 4.766)
-2024-03-28T11:35:43.131+05:30  INFO 20896 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
-2024-03-28T11:35:43.132+05:30  INFO 20896 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-03-28T11:35:43.143+05:30  INFO 20896 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-03-28T11:35:43.145+05:30  INFO 20896 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-03-28T11:35:43.148+05:30  INFO 20896 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-03-28T11:35:43.149+05:30  INFO 20896 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-03-28T11:35:43.151+05:30  INFO 20896 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
-2024-03-28T11:35:49.081+05:30  INFO 11120 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 11120 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T11:35:49.085+05:30  INFO 11120 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T11:35:50.328+05:30  INFO 11120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T11:35:50.341+05:30  INFO 11120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T11:35:50.341+05:30  INFO 11120 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T11:35:50.428+05:30  INFO 11120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T11:35:50.428+05:30  INFO 11120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1202 ms
-2024-03-28T11:35:50.632+05:30  INFO 11120 --- [main] c.t.t.kafka.KafkaMessageProducer         : Kafka producer started...
-2024-03-28T11:35:50.673+05:30  INFO 11120 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2024-03-28T11:35:50.919+05:30  INFO 11120 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2024-03-28T11:35:51.089+05:30  INFO 11120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2024-03-28T11:35:51.093+05:30  INFO 11120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2024-03-28T11:35:51.093+05:30  INFO 11120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1711605951088
-2024-03-28T11:35:51.646+05:30  INFO 11120 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
-2024-03-28T11:35:51.649+05:30  INFO 11120 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 89003 with epoch 0
-2024-03-28T11:35:51.829+05:30  INFO 11120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T11:35:51.840+05:30  INFO 11120 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 3.38 seconds (process running for 3.939)
-2024-03-28T11:36:06.996+05:30  INFO 11120 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T11:36:06.999+05:30  INFO 11120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T11:36:07.002+05:30  INFO 11120 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-03-28T11:36:07.095+05:30  INFO 11120 --- [http-nio-8080-exec-1] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:36:15.230+05:30  INFO 11120 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
-2024-03-28T11:36:15.231+05:30  INFO 11120 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-03-28T11:36:15.238+05:30  INFO 11120 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-03-28T11:36:15.239+05:30  INFO 11120 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-03-28T11:36:15.240+05:30  INFO 11120 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-03-28T11:36:15.242+05:30  INFO 11120 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-03-28T11:36:15.243+05:30  INFO 11120 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
-2024-03-28T11:36:36.447+05:30  INFO 23128 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 23128 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
-2024-03-28T11:36:36.450+05:30  INFO 23128 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
-2024-03-28T11:36:37.926+05:30  INFO 23128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-28T11:36:37.935+05:30  INFO 23128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T11:36:37.936+05:30  INFO 23128 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2024-03-28T11:36:38.029+05:30  INFO 23128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T11:36:38.030+05:30  INFO 23128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1416 ms
-2024-03-28T11:36:38.164+05:30  INFO 23128 --- [main] c.t.t.kafka.KafkaMessageProducer         : Kafka producer started...
-2024-03-28T11:36:38.197+05:30  INFO 23128 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2024-03-28T11:36:38.417+05:30  INFO 23128 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2024-03-28T11:36:38.520+05:30  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
-2024-03-28T11:36:38.524+05:30  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
-2024-03-28T11:36:38.524+05:30  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1711605998517
-2024-03-28T11:36:38.554+05:30  INFO 23128 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.Api_Controller.GetApi.connect()
-2024-03-28T11:36:38.559+05:30  INFO 23128 --- [main] c.t.travellerApp.Api_Controller.GetApi   : Connected to PostgreSQL database Done.............
-2024-03-28T11:36:39.104+05:30  INFO 23128 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
-2024-03-28T11:36:39.107+05:30  INFO 23128 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 89004 with epoch 0
-2024-03-28T11:36:39.666+05:30  INFO 23128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-28T11:36:39.679+05:30  INFO 23128 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 4.07 seconds (process running for 4.945)
-2024-03-28T11:36:43.392+05:30  INFO 23128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T11:36:43.394+05:30  INFO 23128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T11:36:43.395+05:30  INFO 23128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-28T11:36:43.473+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:36:43.551+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:30:22.815+05:30  INFO 13200 --- [http-nio-8080-exec-4] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
+2024-03-29T15:30:22.818+05:30  INFO 13200 --- [http-nio-8080-exec-4] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:30:22.916+05:30  INFO 13200 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Home to one-horned rhinoceros",
   "stateid" : "AS",
   "placeName" : "Kaziranga National Park",
   "placeId" : "62",
-  "searchId" : "894598a8-e053-4a98-b90f-48c06649cbac"
+  "searchId" : "0e43bc44-4995-4e2f-8058-ff7e21686c28"
 }
-2024-03-28T11:36:43.636+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:30:22.918+05:30  INFO 13200 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Famous for Assam tea production",
   "stateid" : "AS",
   "placeName" : "Assam Tea Gardens",
   "placeId" : "63",
-  "searchId" : "894598a8-e053-4a98-b90f-48c06649cbac"
+  "searchId" : "0e43bc44-4995-4e2f-8058-ff7e21686c28"
 }
-2024-03-28T11:36:43.638+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:30:22.920+05:30  INFO 13200 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Hindu temple dedicated to Goddess Kamakhya",
   "stateid" : "AS",
   "placeName" : "Kamakhya Temple",
   "placeId" : "64",
-  "searchId" : "894598a8-e053-4a98-b90f-48c06649cbac"
+  "searchId" : "0e43bc44-4995-4e2f-8058-ff7e21686c28"
 }
-2024-03-28T11:45:39.122+05:30  INFO 23128 --- [http-nio-8080-exec-4] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:45:39.144+05:30  INFO 23128 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:30:27.458+05:30  INFO 13200 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
+2024-03-29T15:30:27.459+05:30  INFO 13200 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-03-29T15:30:27.465+05:30  INFO 13200 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-03-29T15:30:27.470+05:30  INFO 13200 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-03-29T15:30:27.472+05:30  INFO 13200 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-03-29T15:30:27.482+05:30  INFO 13200 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-03-29T15:30:27.486+05:30  INFO 13200 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
+2024-03-29T15:30:27.489+05:30  INFO 13200 --- [SpringApplicationShutdownHook] c.t.t.TravellerAppApplication            : Connection to PostgreSQL database closed.
+2024-03-29T15:31:20.423+05:30  INFO 24056 --- [main] c.t.t.TravellerAppApplication            : Starting TravellerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 24056 (C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp\build\libs\travellerApp-0.0.1-SNAPSHOT.jar started by chinm in C:\Users\chinm\Downloads\PROJECT\travellerApp\travellerApp)
+2024-03-29T15:31:20.425+05:30  INFO 24056 --- [main] c.t.t.TravellerAppApplication            : The following 1 profile is active: "config"
+2024-03-29T15:31:22.489+05:30  INFO 24056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-29T15:31:22.498+05:30  INFO 24056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-29T15:31:22.498+05:30  INFO 24056 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-03-29T15:31:22.580+05:30  INFO 24056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-29T15:31:22.581+05:30  INFO 24056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2061 ms
+2024-03-29T15:31:22.663+05:30  INFO 24056 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.traveller.travellerApp.TravellerAppApplication.connect()
+2024-03-29T15:31:22.665+05:30  INFO 24056 --- [main] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:31:22.907+05:30  INFO 24056 --- [main] c.t.t.kafka.KafkaMessageProducer         : Kafka producer started...
+2024-03-29T15:31:22.944+05:30  INFO 24056 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-03-29T15:31:23.147+05:30  INFO 24056 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-03-29T15:31:23.218+05:30  INFO 24056 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-03-29T15:31:23.226+05:30  INFO 24056 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-03-29T15:31:23.227+05:30  INFO 24056 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1711706483216
+2024-03-29T15:31:24.277+05:30  INFO 24056 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-03-29T15:31:24.280+05:30  INFO 24056 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 90003 with epoch 0
+2024-03-29T15:31:24.912+05:30  INFO 24056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-29T15:31:24.923+05:30  INFO 24056 --- [main] c.t.t.TravellerAppApplication            : Started TravellerAppApplication in 5.248 seconds (process running for 6.048)
+2024-03-29T15:31:33.179+05:30  INFO 24056 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-29T15:31:33.180+05:30  INFO 24056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-29T15:31:33.181+05:30  INFO 24056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-29T15:31:33.279+05:30  INFO 24056 --- [http-nio-8080-exec-1] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
+2024-03-29T15:31:33.279+05:30  INFO 24056 --- [http-nio-8080-exec-1] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:31:33.429+05:30  INFO 24056 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Home to one-horned rhinoceros",
   "stateid" : "AS",
   "placeName" : "Kaziranga National Park",
   "placeId" : "62",
-  "searchId" : "ede46902-a6ce-4f39-b10e-e7f603e1c304"
+  "searchId" : "e0932dc6-8769-46e0-b526-ef1bed533aa4"
 }
-2024-03-28T11:45:39.150+05:30  INFO 23128 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:31:33.529+05:30  INFO 24056 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Famous for Assam tea production",
   "stateid" : "AS",
   "placeName" : "Assam Tea Gardens",
   "placeId" : "63",
-  "searchId" : "ede46902-a6ce-4f39-b10e-e7f603e1c304"
+  "searchId" : "e0932dc6-8769-46e0-b526-ef1bed533aa4"
 }
-2024-03-28T11:45:39.167+05:30  INFO 23128 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:31:33.534+05:30  INFO 24056 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Assam",
   "placedetails" : "Hindu temple dedicated to Goddess Kamakhya",
   "stateid" : "AS",
   "placeName" : "Kamakhya Temple",
   "placeId" : "64",
-  "searchId" : "ede46902-a6ce-4f39-b10e-e7f603e1c304"
+  "searchId" : "e0932dc6-8769-46e0-b526-ef1bed533aa4"
 }
-2024-03-28T11:45:39.169+05:30  INFO 23128 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
-2024-03-28T11:46:22.397+05:30  INFO 23128 --- [http-nio-8080-exec-8] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:46:22.399+05:30  INFO 23128 --- [http-nio-8080-exec-8] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:32:13.376+05:30  INFO 24056 --- [http-nio-8080-exec-4] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
+2024-03-29T15:32:13.377+05:30  INFO 24056 --- [http-nio-8080-exec-4] c.t.t.TravellerAppApplication            : Connected to PostgreSQL database Done.............
+2024-03-29T15:32:13.490+05:30  INFO 24056 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Jharkhand",
   "placedetails" : "Highest waterfall in Jharkhand",
   "stateid" : "JH",
   "placeName" : "Hundru Falls",
   "placeId" : "29",
-  "searchId" : "3ca835d0-c67e-42e9-b3f2-d9bdd421b71c"
+  "searchId" : "10e70ae9-2a3f-4942-8c5b-24a922f3c99c"
 }
-2024-03-28T11:46:22.402+05:30  INFO 23128 --- [http-nio-8080-exec-8] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:32:13.500+05:30  INFO 24056 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Jharkhand",
   "placedetails" : "Modern temple in Ranchi",
   "stateid" : "JH",
   "placeName" : "Jagannath Temple, Ranchi",
   "placeId" : "30",
-  "searchId" : "3ca835d0-c67e-42e9-b3f2-d9bdd421b71c"
+  "searchId" : "10e70ae9-2a3f-4942-8c5b-24a922f3c99c"
 }
-2024-03-28T11:46:22.408+05:30  INFO 23128 --- [http-nio-8080-exec-8] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
+2024-03-29T15:32:13.587+05:30  INFO 24056 --- [http-nio-8080-exec-4] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
   "state" : "Jharkhand",
   "placedetails" : "Oldest national park in Jharkhand",
   "stateid" : "JH",
   "placeName" : "Betla National Park",
   "placeId" : "31",
-  "searchId" : "3ca835d0-c67e-42e9-b3f2-d9bdd421b71c"
+  "searchId" : "10e70ae9-2a3f-4942-8c5b-24a922f3c99c"
 }
-2024-03-28T11:47:43.440+05:30  INFO 23128 --- [http-nio-8080-exec-5] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:47:43.442+05:30  INFO 23128 --- [http-nio-8080-exec-5] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Jharkhand",
-  "placedetails" : "Highest waterfall in Jharkhand",
-  "stateid" : "JH",
-  "placeName" : "Hundru Falls",
-  "placeId" : "29",
-  "searchId" : "4fc0e562-d2c5-454e-bddd-fe74e8b95417"
-}
-2024-03-28T11:47:43.444+05:30  INFO 23128 --- [http-nio-8080-exec-5] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Jharkhand",
-  "placedetails" : "Modern temple in Ranchi",
-  "stateid" : "JH",
-  "placeName" : "Jagannath Temple, Ranchi",
-  "placeId" : "30",
-  "searchId" : "4fc0e562-d2c5-454e-bddd-fe74e8b95417"
-}
-2024-03-28T11:47:43.445+05:30  INFO 23128 --- [http-nio-8080-exec-5] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Jharkhand",
-  "placedetails" : "Oldest national park in Jharkhand",
-  "stateid" : "JH",
-  "placeName" : "Betla National Park",
-  "placeId" : "31",
-  "searchId" : "4fc0e562-d2c5-454e-bddd-fe74e8b95417"
-}
-2024-03-28T11:48:09.348+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T11:48:09.354+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous beach with a spiritual touch, known for the Jagannath Temple",
-  "stateid" : "OD",
-  "placeName" : "Puri Beach",
-  "placeId" : "1",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.359+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "UNESCO World Heritage Site, architectural marvel dedicated to the Sun God",
-  "stateid" : "OD",
-  "placeName" : "Konark Sun Temple",
-  "placeId" : "2",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.371+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Asia largest brackish water lagoon, famous for bird watching",
-  "stateid" : "OD",
-  "placeName" : "Chilika Lake",
-  "placeId" : "3",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.390+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the oldest and largest temples in Bhubaneswar",
-  "stateid" : "OD",
-  "placeName" : "Lingaraja Temple",
-  "placeId" : "4",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.505+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Peace Pagoda built in the Kalinga architectural style",
-  "stateid" : "OD",
-  "placeName" : "Dhauli Shanti Stupa",
-  "placeId" : "5",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.610+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous zoo with a white tiger safari and botanical garden",
-  "stateid" : "OD",
-  "placeName" : "Nandankanan Zoological Park",
-  "placeId" : "6",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.614+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Ancient rock-cut caves with Jain and Buddhist influence",
-  "stateid" : "OD",
-  "placeName" : "Udayagiri and Khandagiri Caves",
-  "placeId" : "7",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.618+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous for Pattachitra paintings and traditional crafts",
-  "stateid" : "OD",
-  "placeName" : "Raghurajpur Crafts Village",
-  "placeId" : "8",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.627+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Tiger reserve and wildlife sanctuary with lush greenery",
-  "stateid" : "OD",
-  "placeName" : "Simlipal National Park",
-  "placeId" : "9",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.631+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the longest dams in the world, built across the Mahanadi River",
-  "stateid" : "OD",
-  "placeName" : "Hirakud Dam",
-  "placeId" : "10",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T11:48:09.726+05:30  INFO 23128 --- [http-nio-8080-exec-3] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "A beautiful city",
-  "stateid" : "OD",
-  "placeName" : "Rairangpur",
-  "placeId" : "92",
-  "searchId" : "b8000455-be81-4524-8107-1a22e41ba486"
-}
-2024-03-28T12:34:01.774+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T12:34:01.822+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous beach with a spiritual touch, known for the Jagannath Temple",
-  "stateid" : "OD",
-  "placeName" : "Puri Beach",
-  "placeId" : "1",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.887+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "UNESCO World Heritage Site, architectural marvel dedicated to the Sun God",
-  "stateid" : "OD",
-  "placeName" : "Konark Sun Temple",
-  "placeId" : "2",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.891+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Asia largest brackish water lagoon, famous for bird watching",
-  "stateid" : "OD",
-  "placeName" : "Chilika Lake",
-  "placeId" : "3",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.896+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the oldest and largest temples in Bhubaneswar",
-  "stateid" : "OD",
-  "placeName" : "Lingaraja Temple",
-  "placeId" : "4",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.901+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Peace Pagoda built in the Kalinga architectural style",
-  "stateid" : "OD",
-  "placeName" : "Dhauli Shanti Stupa",
-  "placeId" : "5",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.903+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous zoo with a white tiger safari and botanical garden",
-  "stateid" : "OD",
-  "placeName" : "Nandankanan Zoological Park",
-  "placeId" : "6",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.906+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Ancient rock-cut caves with Jain and Buddhist influence",
-  "stateid" : "OD",
-  "placeName" : "Udayagiri and Khandagiri Caves",
-  "placeId" : "7",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.915+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous for Pattachitra paintings and traditional crafts",
-  "stateid" : "OD",
-  "placeName" : "Raghurajpur Crafts Village",
-  "placeId" : "8",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.919+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Tiger reserve and wildlife sanctuary with lush greenery",
-  "stateid" : "OD",
-  "placeName" : "Simlipal National Park",
-  "placeId" : "9",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.922+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the longest dams in the world, built across the Mahanadi River",
-  "stateid" : "OD",
-  "placeName" : "Hirakud Dam",
-  "placeId" : "10",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:34:01.928+05:30  INFO 23128 --- [http-nio-8080-exec-9] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "A beautiful city",
-  "stateid" : "OD",
-  "placeName" : "Rairangpur",
-  "placeId" : "92",
-  "searchId" : "480343ed-a7f6-42e8-824a-e24b6bda4884"
-}
-2024-03-28T12:43:03.576+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.travellerApp.Api_Controller.GetApi   : Respond ok!!
-2024-03-28T12:43:03.589+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous beach with a spiritual touch, known for the Jagannath Temple",
-  "stateid" : "OD",
-  "placeName" : "Puri Beach",
-  "placeId" : "1",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.606+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "UNESCO World Heritage Site, architectural marvel dedicated to the Sun God",
-  "stateid" : "OD",
-  "placeName" : "Konark Sun Temple",
-  "placeId" : "2",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.612+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Asia largest brackish water lagoon, famous for bird watching",
-  "stateid" : "OD",
-  "placeName" : "Chilika Lake",
-  "placeId" : "3",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.622+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the oldest and largest temples in Bhubaneswar",
-  "stateid" : "OD",
-  "placeName" : "Lingaraja Temple",
-  "placeId" : "4",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.629+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Peace Pagoda built in the Kalinga architectural style",
-  "stateid" : "OD",
-  "placeName" : "Dhauli Shanti Stupa",
-  "placeId" : "5",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.636+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous zoo with a white tiger safari and botanical garden",
-  "stateid" : "OD",
-  "placeName" : "Nandankanan Zoological Park",
-  "placeId" : "6",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.643+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Ancient rock-cut caves with Jain and Buddhist influence",
-  "stateid" : "OD",
-  "placeName" : "Udayagiri and Khandagiri Caves",
-  "placeId" : "7",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.653+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Famous for Pattachitra paintings and traditional crafts",
-  "stateid" : "OD",
-  "placeName" : "Raghurajpur Crafts Village",
-  "placeId" : "8",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.674+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "Tiger reserve and wildlife sanctuary with lush greenery",
-  "stateid" : "OD",
-  "placeName" : "Simlipal National Park",
-  "placeId" : "9",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.680+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "One of the longest dams in the world, built across the Mahanadi River",
-  "stateid" : "OD",
-  "placeName" : "Hirakud Dam",
-  "placeId" : "10",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:03.691+05:30  INFO 23128 --- [http-nio-8080-exec-1] c.t.t.kafka.KafkaMessageProducer         : Producing Kafka message to topic 'abc': {
-  "state" : "Odisha",
-  "placedetails" : "A beautiful city",
-  "stateid" : "OD",
-  "placeName" : "Rairangpur",
-  "placeId" : "92",
-  "searchId" : "c0bee42a-024b-4503-b6b5-8b0ce4713a24"
-}
-2024-03-28T12:43:29.193+05:30  INFO 23128 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
-2024-03-28T12:43:29.194+05:30  INFO 23128 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2024-03-28T12:43:29.208+05:30  INFO 23128 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2024-03-28T12:43:29.209+05:30  INFO 23128 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-03-28T12:43:29.210+05:30  INFO 23128 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2024-03-28T12:43:29.217+05:30  INFO 23128 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
-2024-03-28T12:43:29.218+05:30  INFO 23128 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
+2024-03-29T15:40:24.389+05:30  INFO 24056 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-03-29T15:44:06.037+05:30  INFO 24056 --- [SpringApplicationShutdownHook] c.t.t.kafka.KafkaMessageProducer         : Closing Kafka producer...
+2024-03-29T15:44:06.039+05:30  INFO 24056 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-03-29T15:44:06.048+05:30  INFO 24056 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-03-29T15:44:06.049+05:30  INFO 24056 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-03-29T15:44:06.049+05:30  INFO 24056 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-03-29T15:44:06.053+05:30  INFO 24056 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-03-29T15:44:06.055+05:30  INFO 24056 --- [SpringApplicationShutdownHook] c.t.travellerApp.kafka.SearchData        : Kafka closed producer ............
+2024-03-29T15:44:06.060+05:30  INFO 24056 --- [SpringApplicationShutdownHook] c.t.t.TravellerAppApplication            : Connection to PostgreSQL database closed.

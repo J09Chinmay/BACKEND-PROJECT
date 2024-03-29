@@ -11,6 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import com.traveller.travellerApp.Values.Database_config;
 
+import jakarta.annotation.PreDestroy;
+
 // import jakarta.annotation.PreDestroy;
 
 @SpringBootApplication
@@ -18,37 +20,13 @@ import com.traveller.travellerApp.Values.Database_config;
 
 public class TravellerAppApplication {
 	private static final org.slf4j.Logger log = LoggerFactory.getLogger(TravellerAppApplication.class);
-	// private final Database_config appConfig;
-
 	// @Autowired
-	// public TravellerAppApplication(Database_config appConfig) {
-	// this.appConfig = appConfig;
-	// }
+	private Database_config appConfig;
 
-	public Connection connection;
-
-	// public Connection connect() throws SQLException {
-	// String url = appConfig.getDatasourceUrl();
-	// String user = appConfig.getDatasourceUsername();
-	// String password = appConfig.getDatasourcePassword();
-
-	// return DriverManager.getConnection(url, user, password);
-	// }
-	// @Autowired
-	// public void connect() {
-	// try {
-	// String url = appConfig.getDatasourceUrl();
-	// String user = appConfig.getDatasourceUsername();
-	// String password = appConfig.getDatasourcePassword();
-	// // Establish connection
-
-	// log.info("Connected to PostgreSQL database Done.");
-	// connection = DriverManager.getConnection(url, user, password);
-	// } catch (SQLException e) {
-	// log.error("Failed to connect to PostgreSQL database: " + e.getMessage());
-	// }
-	// // return null;
-	// }
+	@Autowired
+	public TravellerAppApplication(Database_config appConfig) {
+		this.appConfig = appConfig;
+	}
 
 	public static void main(String[] args) {
 
@@ -59,25 +37,35 @@ public class TravellerAppApplication {
 
 	}
 
-	// @PreDestroy
-	// public void closeConnection() {
-	// if (connection != null) {
-	// try {
-	// connection.close();
-	// log.info("Connection to PostgreSQL database closed.");
-	// } catch (SQLException e) {
-	// log.info("Failed to close connection: " + e.getMessage());
-	// }
-	// } else {
-	// log.info("Connection is already closed.");
-	// }
-	// }
+	public Connection connection;
+
+	@Autowired
+	public Connection connect() {
+		try {
+			String url = appConfig.getDatasourceUrl();
+			String user = appConfig.getDatasourceUsername();
+			String password = appConfig.getDatasourcePassword();
+
+			log.info("Connected to PostgreSQL database Done.............");
+			return connection = DriverManager.getConnection(url, user, password);
+		} catch (SQLException e) {
+			log.error("Failed to connect to PostgreSQL database: " + e.getMessage());
+		}
+		return null;
+	}
+
+	@PreDestroy
+	public void closeConnection() {
+		if (connection != null) {
+			try {
+				connection.close();
+				log.info("Connection to PostgreSQL database closed.");
+			} catch (SQLException e) {
+				log.info("Failed to close connection: " + e.getMessage());
+			}
+		} else {
+			log.info("Connection is already closed.");
+		}
+	}
 
 }
-
-// public Connection connect() throws SQLException {
-// return DriverManager.getConnection(url, user, password);
-// }
-// private final String url = "jdbc:postgresql://localhost/postgres";
-// private final String user = "postgres";
-// private final String password = "chinmay09";
